@@ -16,7 +16,7 @@ Users can:
 - Drive a virtual manipulator by using Python script.
 
 ## Install
-- Install ROS indigo on Ubuntu 14.04.
+- Install ROS indigo on Ubuntu 14.04. (Desktop-Full)
 - Setup ROS enviroment.
 - Clone this repository.
 ```
