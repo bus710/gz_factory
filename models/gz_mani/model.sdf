@@ -1,0 +1,243 @@
+<?xml version='1.0'?>
+
+<!-- mesh -> pose -> joint -> collision -> joint.linit -->
+
+<sdf version='1.5'>
+
+	<model name="gz_mani">
+		<!--<static>false</static>-->
+
+		<link name='link0'> 
+			<inertial><mass>1000</mass></inertial>
+			<pose>0 0 0.1 0 0 0</pose> <!--x, y, z, p, y, r -->
+
+			<visual name='vis_link0'>
+				<geometry>
+					<mesh><uri>model://gz_mani/link0.dae</uri></mesh>
+					<!-- <box> <size>.1 .1 .1</size>	</box> -->
+				</geometry>
+			</visual>
+
+			<collision name='col_link0'>
+				<geometry>
+					<box>
+						<size>.2 .2 .1</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+
+		<link name="link1">
+			<pose>0 0 0.3 0 0 0</pose>
+			<self_collide>0</self_collide>
+			
+			<visual name="vis_link1">
+				<geometry>
+					<mesh><uri>model://gz_mani/link1.dae</uri></mesh>
+				</geometry> 
+				<material>
+					<script>
+						<uri>file://media/materials/scripts/gazebo.material</uri>
+						<name>Gazebo/Grey</name>
+					</script>
+				</material>
+			</visual>
+			
+			<collision name="col_link1">
+				<geometry>
+					<box>
+						<size>.0 .0 .0</size>
+					</box>
+				</geometry>
+			</collision>
+
+		</link>
+
+		<link name="link2">
+			<pose>0 0.05 0.66 0 0 0</pose>
+			<self_collide>0</self_collide>
+			
+			<visual name="vis_link2">
+				<geometry>
+					<mesh><uri>model://gz_mani/link2.dae</uri></mesh>
+				</geometry>
+			</visual>
+
+			<collision name="col_link2">
+				<geometry>
+					<box>
+						<size>.0 .0 .0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+
+		<link name="link3">
+			<pose>0 0.05 1.13 0 0 0</pose>
+			<self_collide>0</self_collide>
+			
+			<visual name="vis_link3">
+				<geometry>
+					<mesh><uri>model://gz_mani/link3.dae</uri></mesh>
+				</geometry>
+			</visual>
+			
+			<collision name="col_link3">
+				<geometry>
+					<box>
+						<size>.0 .0 .0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+
+		<link name="link4">
+			<pose>0 0.05 1.33 0 0 0</pose>
+			<self_collide>0</self_collide>
+			
+			<visual name="vis_link4">
+				<geometry>
+					<mesh><uri>model://gz_mani/link4.dae</uri></mesh>
+				</geometry>	
+				<material>
+					<script>
+						<uri>file://media/materials/scripts/gazebo.material</uri>
+						<name>Gazebo/Grey</name>
+					</script>
+				</material>
+			</visual>	
+
+			<collision name="col_link4">
+				<geometry>
+					<box>
+						<size>.0 .0 .0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+
+
+		<link name="link5">
+			<pose>0 0.05 1.51 0 0 0</pose>
+			<self_collide>0</self_collide>
+			
+			<visual name="vis_link5">
+				<geometry>
+					<mesh><uri>model://gz_mani/link5.dae</uri></mesh>
+				</geometry>
+				<material>
+					<script>
+						<uri>file://media/materials/scripts/gazebo.material</uri>
+						<name>Gazebo/Grey</name>
+					</script>
+				</material>
+			</visual>
+
+			<collision name="col_link5">
+				<geometry>
+					<box>
+						<size>.0 .0 .0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+
+
+		<link name="link6">
+			<pose>0 0.05 1.58 0 0 0</pose>
+			<self_collide>0</self_collide>
+			
+			<visual name="vis_link6">
+				<geometry>
+					<mesh><uri>model://gz_mani/link6.dae</uri></mesh>
+				</geometry>
+			</visual>
+
+			<collision name="col_link6">
+				<geometry>
+					<box>
+						<size>.0 .0 .0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+
+		<!--==========================================-->
+		<!--==========================================-->
+		<joint type="revolute" name="joint0">
+			<pose>0 0 0 0 0 0</pose>
+			<parent>world</parent>
+			<child>link0</child>
+			<axis>
+				<xyz>0 0 0</xyz>
+			</axis>
+		</joint>
+
+		<joint type="revolute" name="joint1">
+			<pose>0 0 0 0 0 0</pose>
+			<parent>link0</parent>
+			<child>link1</child>
+			<axis>
+				<xyz>0 0 1.0</xyz>
+			</axis>
+		</joint>
+
+		<joint type="revolute" name="joint2">
+			<pose>0 0 -0.13 0 0 0</pose>
+			<parent>link1</parent>
+			<child>link2</child>
+			<axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+                    <lower>-1.57</lower>
+					<upper>1.57</upper>
+				</limit>
+			</axis>
+		</joint>
+
+		<joint type="revolute" name="joint3">
+			<pose>0 0 -0.21 0 0 0</pose>
+			<parent>link2</parent>
+			<child>link3</child>
+			<axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+                    <lower>-1.57</lower>
+					<upper>1.57</upper>
+				</limit>
+			</axis>
+		</joint>
+
+		<joint type="revolute" name="joint4">
+			<pose>0 0 0 0 0 0</pose>
+			<parent>link3</parent>
+			<child>link4</child>
+			<axis>
+				<xyz>0 0 1</xyz>
+			</axis>
+		</joint>
+
+		<joint type="revolute" name="joint5">
+			<pose>0 0 -0.09 0 0 0</pose>
+			<parent>link4</parent>
+			<child>link5</child>
+			<axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+                    <lower>-1.57</lower>
+					<upper>1.57</upper>
+				</limit>
+			</axis>
+		</joint>
+
+		<joint type="revolute" name="joint6">
+			<pose>0 0 0 0 0 0</pose>
+			<parent>link5</parent>
+			<child>link6</child>
+			<axis>
+				<xyz>0 0 1</xyz>
+			</axis>
+		</joint>
+
+	</model>
+</sdf>
