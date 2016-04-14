@@ -39,3 +39,4 @@ python pub_for_gz_mani.py
 A custom 6 DoF manipulator  
 ![gz_mani](screenshots/gz_mani.jpg)
 
+
