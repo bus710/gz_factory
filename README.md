@@ -1,8 +1,7 @@
 # gz_factory
-A virtual factory in Gazebo Robot Simulator
 
 ## Maintainer
-- [SJ Kim](bus710.net) <<bus710@gmail.com>>
+- [SJ Kim](http://bus710.net)<<bus710@gmail.com>>
 
 ## Table of contents
 - [Description](#description)
@@ -10,7 +9,23 @@ A virtual factory in Gazebo Robot Simulator
 - [Models](#models) 
 
 ## Description
+A virtual factory in Gazebo Robot Simulator
+
 ## Install
+```
+cd $HOME/catkin_ws/src/
+git clone https://github.com/bus710/gz_factory
+cd $HOME/catkin_ws
+catkin_make
+source devel/setup.bash
+roslaunch gz_factory gz_factory.launch
+```
+If you see Gazebo launches well, open a new terminal.
+```
+cd $HOME/catkin_ws/src/gz_factory/src
+python pub_for_gz_mani.py
+```
+
 
 ## Models
 ### gz_mani
