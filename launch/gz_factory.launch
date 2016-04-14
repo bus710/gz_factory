@@ -1,6 +1,6 @@
 <launch>
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
-		<arg name="world_name" value="$(find gzFactory)/worlds/gzFactory.world"/>
+		<arg name="world_name" value="$(find gz_factory)/worlds/gz_factory.world"/>
 	</include>
 </launch>
 
