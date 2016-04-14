@@ -9,8 +9,11 @@
 - [Models](#models) 
 
 ## Description
-A virtual factory in Gazebo Robot Simulator.   
-Users can see the basic structure of a Gazebo project, and drive a virtual manipulator by using Python script.
+A virtual factory in Gazebo Robot Simulator.  
+
+Users can:   
+- See the basic structure of a Gazebo project.  
+- Drive a virtual manipulator by using Python script.
 
 ## Install
 1. Install ROS indigo on Ubuntu 14.04.
