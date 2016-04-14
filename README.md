@@ -9,7 +9,7 @@
 - [Models](#models) 
 
 ## Description
-A virtual factory in Gazebo Robot Simulator.
+A virtual factory in Gazebo Robot Simulator.   
 Users can see the basic structure of a Gazebo project, and drive a virtual manipulator by using Python script.
 
 ## Install
@@ -35,3 +35,4 @@ python pub_for_gz_mani.py
 ### gz_mani
 A custom 6 DoF manipulator
 ![gz_mani](screenshots/gz_mani.jpg)
+
