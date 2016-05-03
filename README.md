@@ -25,7 +25,10 @@ git clone https://github.com/bus710/gz_factory
 cd $HOME/catkin_ws
 catkin_make
 source devel/setup.bash
-<b>cd $HOME/catkin_ws/src/gz_factory/src </b>
+
+# don't forget copying the model.
+cd $HOME/catkin_ws/src/gz_factory/src
+
 roslaunch gz_factory gz_factory.launch
 ```
 - If you see Gazebo launches well, open a new terminal.
