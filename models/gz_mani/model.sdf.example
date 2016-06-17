@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+
+<!-- mesh -> pose -> joint -> collision -> joint.linit -->
+
+<sdf version='1.5'>
+
+	<model name="gz_mani">
+		<pose>0 0 0 0 0 0</pose> <!--x, y, z, p, y, r -->
+
+		<link name='link0'> 
+			<inertial>
+				<mass>1000</mass>
+				<inertia></inertia>
+			</inertial>
+
+			<collision name='col_link0'>
+				<geometry>
+					<box>
+						<size>.2 .2 .1</size>
+					</box>
+				</geometry>
+			</collision>
+			
+			<visual name='vis_link0'>
+				<geometry>
+					<mesh><uri>model://gz_mani/link0.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+
+		<link name='link1'> 
+			<inertial>
+				<mass>1000</mass>
+				<inertia></inertia>
+			</inertial>
+
+			<collision name='col_link1'>
+				<geometry>
+					<box>
+						<size>.2 .2 .1</size>
+					</box>
+				</geometry>
+			</collision>
+			
+			<visual name='vis_link1'>
+				<geometry>
+					<mesh><uri>model://gz_mani/link1.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+
+		<joint name="joint1" type="revolute">
+			<parent>link0</parent>
+			<child>link1</child>
+			<axis>
+				<xyz>1 0 0</xyz>
+			</axis>
+		</joint>
+
+	</model>
+</sdf>
